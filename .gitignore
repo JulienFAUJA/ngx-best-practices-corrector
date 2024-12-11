@@ -8,8 +8,6 @@
 /bazel-out
 .angular/
 
-# Logs
-*.log
 
 # Node
 /node_modules
@@ -181,4 +179,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
->>>>>>> ffd6fbaef4973fa3f5500b8894601f83841720ba
+
+projects/demo-app/
+rojects/ngx-dom-visualizer/
+
