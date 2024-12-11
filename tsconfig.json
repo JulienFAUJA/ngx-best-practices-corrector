@@ -11,6 +11,11 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
+    "paths": {
+      "ngx-dom-visualizer": [
+        "./dist/ngx-dom-visualizer"
+      ]
+    },
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
