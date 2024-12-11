@@ -40,8 +40,12 @@
       "sourceRoot": "projects/demo-app/src",
       "prefix": "app",
       "architect": {
+        "analyze": {
+          "builder": "ngx-best-practices-corrector:build",
+          "options": {}
+        },
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "ngx-best-practices-corrector:build",
           "options": {
             "outputPath": "dist/demo-app",
             "index": "projects/demo-app/src/index.html",
@@ -54,9 +58,7 @@
                 "input": "projects/demo-app/public"
               }
             ],
-            "styles": [
-              "projects/demo-app/src/styles.css"
-            ],
+            "styles": ["projects/demo-app/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -111,6 +113,36 @@
             ],
             "styles": ["projects/demo-app/src/styles.css"],
             "scripts": []
+          }
+        }
+      }
+    },
+    "ngx-best-practices-corrector": {
+      "projectType": "library",
+      "root": "projects/ngx-best-practices-corrector",
+      "sourceRoot": "projects/ngx-best-practices-corrector/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-best-practices-corrector/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-best-practices-corrector/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-best-practices-corrector/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ngx-best-practices-corrector/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
           }
         }
       }

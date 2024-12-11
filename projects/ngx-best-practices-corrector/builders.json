@@ -1,0 +1,10 @@
+{
+      "$schema": "../../node_modules/@angular-devkit/architect/src/builders-schema.json",
+      "builders": {
+        "build": {
+          "implementation": "./builder",
+          "schema": "./builder-schema.json",
+          "description": "A builder to validate best practices for Angular projects"
+        }
+      }
+    }

@@ -12,6 +12,9 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "paths": {
+      "ngx-best-practices-corrector": [
+        "./dist/ngx-best-practices-corrector"
+      ],
       "ngx-dom-visualizer": [
         "./dist/ngx-dom-visualizer"
       ]

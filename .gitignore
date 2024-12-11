@@ -180,6 +180,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-projects/demo-app/
+#projects/demo-app/
 projects/ngx-dom-visualizer/
 
